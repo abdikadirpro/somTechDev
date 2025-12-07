@@ -6,11 +6,12 @@ export default {
   theme: {
     extend: {
        colors: {
-        primary: "#1D4ED8",    // custom blue
-        secondary: "#F59E0B",  // custom orange
+        primary: "#24B2CE",    
+        secondary: "#0E294A",
+        hover:"#4dd1eb"
       },
       fontFamily: {
-        body: ["Inter", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
       },
     },
   },
