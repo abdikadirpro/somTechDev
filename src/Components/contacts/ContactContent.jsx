@@ -43,6 +43,7 @@ function ContactContent() {
             </div>
           </div>
         </div>
+        
        <div className="shadow-lg p-6 bg-white rounded-md w-full lg:w-1/2 sm:1/4">
 
           <div className=" flex flex-col m-2  ">

@@ -5,15 +5,21 @@ import Software from '../Components/service/Software'
 import Maintenance from '../Components/service/Maintenance'
 import Branding from '../Components/service/Branding'
 import UiUx from '../Components/service/UIUX'
+import Footer from '../Components/footer/Footer'
 const Service = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-20">
+    <div className='w-[1100px] mx-auto  '>
     <Web/>
     <Application/>
     <Software/>
     <Maintenance/>
     <Branding/>
     <UiUx/>
+     
+  
+    </div>
+     <Footer />
     </div>
   )
 }

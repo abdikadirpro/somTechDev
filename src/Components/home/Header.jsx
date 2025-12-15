@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
   return ( 
-    <div className="bg-secondary text-2xl font-bold font-body">
+    <div className="bg-slate-500 text-2xl font-bold font-body">
         <div className="flex justify-between p-4 text-white">
             <h3 className="text-3xl font-bold">SomTechDev</h3>
             <div className="flex justify-center items-center">
@@ -12,7 +12,7 @@ const Header = () => {
                     <Link to="/service">service</Link>
                     <Link to="/blogs">blogs</Link>
                     <Link to="/contacts">contact</Link>
-                    <button className="text-secondary bg-primary rounded-xl p-1 mb-4 align-middle capitalize ">getstarted</button>
+                    <button className="text-slate-500 bg-primary rounded-xl p-1 mb-4 align-middle capitalize ">getstarted</button>
                 </ul>
 
             </div>

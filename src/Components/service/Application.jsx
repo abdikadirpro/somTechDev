@@ -3,7 +3,7 @@ import app from "../../assets/image/app1.png";
 
 const Application = () => {
   return (
-   <section className="body-Poppins w-full bg-white py-2 px-6 md:px-12">
+   <section className="body-Poppins w-full bg-white py-2 my-4 px-6 md:px-12">
 
 
   <div className="mb-5">
@@ -21,7 +21,8 @@ const Application = () => {
   </div>
 
 
-  <div className="flex flex-col md:flex-row items-start gap-8">
+  <div className="flex flex-col md:flex-row items-center gap-8 rounded-xl shadow-lg px-5 
+  hover:scale-105 duration-300">
     
     <p className="
       text-lg text-gray-600 font-light leading-relaxed
@@ -41,7 +42,7 @@ const Application = () => {
     <img
       src={app}
       alt="Web Development"
-      className="md:w-96  max-w-md hover:scale-105 duration-300 "
+      className="md:w-[610px]  max-w-md hover:scale-105 duration-300 "
     />
   </div>
 </section>
