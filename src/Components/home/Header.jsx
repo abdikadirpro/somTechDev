@@ -7,7 +7,7 @@ const Header = () => {
             <h3 className="text-3xl font-bold">SomTechDev</h3>
             <div className="flex justify-center items-center">
                 <ul className="flex gap-5 capitalize font-semibold hover:*:underline decoration-primary">
-                    <Link to="/">Home change</Link>
+                    <Link to="/">Home </Link>
                     <Link to="/about">about </Link>
                     <Link to="/service">service</Link>
                     <Link to="/blogs">blogs</Link>
