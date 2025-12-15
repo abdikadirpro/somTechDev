@@ -5,10 +5,10 @@ import web1 from "../../assets/image/web2.avif";
 
 const Web = () => {
   return (
-   <section className="body-Poppins w-full bg-white py-8 px-6 md:px-12">
+   <section className="body-Poppins w-fu bg-white my-5 px-6 md:px-12">
 
 
-  <div className="mb-5">
+  <div className="mb-5 ">
     <h1 className="
       text-4xl md:text-5xl font-bold text-primary uppercase tracking-wide
       relative
@@ -23,7 +23,9 @@ const Web = () => {
   </div>
 
 
-  <div className="flex flex-col md:flex-row items-start gap-8">
+  <div className="flex flex-col md:flex-row items-center gap-8 rounded-xl shadow-lg px-5 
+  hover:scale-105 duration-300
+  ">
     
     <p className="
       text-lg text-gray-600 font-light leading-relaxed
@@ -39,7 +41,7 @@ const Web = () => {
     <img
       src={web1}
       alt="Web Development"
-      className="md:w-80  max-w-md  hover:scale-105 duration-300 "
+      className="md:w-90  max-w-md mb-2 hover:scale-105 duration-300 "
     />
   </div>
 </section>

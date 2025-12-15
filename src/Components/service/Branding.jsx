@@ -22,7 +22,8 @@ const Branding = () => {
   </div>
 
 
-  <div className="flex flex-col md:flex-row items-start gap-8">
+  <div className="flex flex-col md:flex-row items-center rounded-xl shadow-lg px-5 
+  hover:scale-105 duration-300 gap-20 mb-5">
     
     <p className="
       text-lg text-gray-600 font-light leading-relaxed
