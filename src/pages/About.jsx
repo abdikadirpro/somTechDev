@@ -1,9 +1,18 @@
+import About from "../Components/about/About"
+import Footer from "../Components/footer/Footer"
+import Footers from "../Components/footer/Footers"
 
 
-const About = () => {
+const Abouts = () => {
   return (
-    <div>About</div>
+    <div className="">
+       <div className='w-[1100px] mx-auto  '>
+      <About />
+    </div>
+    <Footer />
+    <Footers />
+    </div>
   )
 }
 
-export default About
+export default Abouts
