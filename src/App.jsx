@@ -8,6 +8,8 @@ import Service from "./pages/Service"
 import Blogs from "./pages/Blogs"
 import Header from "./Components/home/Header"
 import Contacts from "./pages/Contacts"
+import BlogsCreate from "./Components/blogs/BlogsCreate"
+import PostList from "./Components/blogs/PostList"
 
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
     <Route path="/about" element={<About/>}/>
     <Route path="/service" element={<Service/>}/>
     <Route path="/blogs" element={<Blogs/>}/>
+    <Route path="/blogs/BlogsCreate" element={<BlogsCreate/>}/>
+    <Route path="/blogs/PostList" element={<PostList/>}/>
     <Route path="/contacts" element={<Contacts/>}/>
   </Routes>
   
