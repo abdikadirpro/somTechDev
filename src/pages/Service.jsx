@@ -6,9 +6,10 @@ import Maintenance from '../Components/service/Maintenance'
 import Branding from '../Components/service/Branding'
 import UiUx from '../Components/service/UIUX'
 import Footer from '../Components/footer/Footer'
+import Footers from '../Components/footer/Footers'
 const Service = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col ">
     <div className='w-[1100px] mx-auto  '>
     <Web/>
     <Application/>
@@ -20,6 +21,7 @@ const Service = () => {
   
     </div>
      <Footer />
+     <Footers />
     </div>
   )
 }

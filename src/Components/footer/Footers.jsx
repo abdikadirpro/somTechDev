@@ -1,10 +1,11 @@
 import { FaLocationDot, FaPhone, FaSquareYoutube, FaTelegram, FaTiktok } from "react-icons/fa6"
 import { MdOutlineFacebook, MdOutlineMailOutline } from "react-icons/md"
-
+import { Link } from "react-router-dom"
+import whastapp from "../../assets/image/what.png"
 
 function Footers() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col bg-slate-500'>
       <div className="flex flex-row justify-around items-center bg-slate-500 border-lg   ">
         <div className="my-3">
             <p className='text-3xl text-white'>Start learning with 20k students around the world.</p>
@@ -28,35 +29,70 @@ function Footers() {
            
         </div>
       </div>
-      <div className=" bg-slate-500 border-lg border-t border-white">
-         <div className="flex flex-col gap-6 w-full lg:w-1/2">
+      <div className=" flex flex-row justify-around bg-slate-500 border-lg border-t w-[1100px] mx-auto  border-white">
+              <div className="flex flex-col gap-6  lg:w-1/2 my-3">
 
-           <h1 className=' capitalize text-4xl font-semibold sm:text-center lg:text-start text-gray-500'>contact Us</h1>
+                <h1 className=' capitalize text-4xl font-semibold sm:text-center lg:text-start text-white'>contact Us</h1>
+                  
+                <div className="flex flex-row">
+                  <FaPhone  className="text-white rounded-xl bg-transparent  font-semibold text-3xl m-2" />
+                  <div className="">
+                      <span className="ml-5 text-2xl text-slate-300">Phone</span>
+                      <p className="text-slate-300 ml-4">+251901375553/+25102276248</p>
+                  </div>
+                </div>
+                <div className="flex flex-row">
+                  <MdOutlineMailOutline className="text-white rounded-xl mt-3 bg-transparent font-semibold text-4xl " />
+                  <div className="space-y-3">
+                      <span className="ml-5 text-2xl text-slate-300">Email</span>
+                      <p className="text-xl text-slate-300 ml-4">infoSomTechDev@gmail.com</p>
+                  </div>
+                </div>
+                <div className="flex flex-row">
+                  <FaLocationDot className="text-white rounded-xl mt-4 bg-transparent font-extrabold text-4xl" />
+                  <div className="space-y-3">
+                      <span className="ml-5 text-2xl text-slate-300">Headquarter Office</span>
+                      <p className="text-slate-300 ml-4">jigjiga,somali region, ethiopia</p>
+                  </div>
+                </div>
+                <div className="flex flex-row justify-start items-center gap-4">
+                    <MdOutlineFacebook className="text-4xl  text-white rounded-xl" />
+                    <FaTiktok className="text-4xl  text-white rounded-xl" />
+                    <FaTelegram className="text-4xl  text-white rounded-xl" />
+                    <FaSquareYoutube className="text-4xl  text-white rounded-xl" />
+                  </div>
             
-          <div className="flex flex-row">
-             <FaPhone  className="text-white rounded-xl bg-transparent w-[50px] h-[50px] font-semibold text-2xl m-2" />
-            <div className="space-y-3">
-                <span className="ml-5 text-3xl">Phone</span>
-                <p>+251901375553/+25102276248</p>
-            </div>
-          </div>
-          <div className="flex flex-row">
-             <MdOutlineMailOutline className="text-white rounded-xl bg-transparent font-semibold text-5xl " />
-            <div className="space-y-3">
-                <span className="ml-5 text-3xl">Email</span>
-                <p className="text-xl">infoSomTechDev@gmail.com</p>
-            </div>
-          </div>
-          <div className="flex flex-row">
-             <FaLocationDot className="text-white rounded-xl bg-transparent font-extrabold text-5xl" />
-            <div className="space-y-3">
-                <span className="ml-5 text-3xl">Headquarter Office</span>
-                <p>jigjiga,somali region, ethiopia</p>
-            </div>
-          </div>
-      
-        </div>
+              </div>
+              <div className="my-4 flex flex-col gap-10 mr-20">
+                      <h1 className="capitalize text-4xl font-semibold sm:text-center lg:text-start text-white">  categories</h1>
+                      <div className="flex flex-col gap-7 capitalize text-2xl text-slate-300">
+                          <span>Web App</span>
+                          <span>maintaince</span>
+                          <span>mobile App</span>
+                          <span>ui/ux</span>
+                      </div>
+              </div>
+              <div className="my-4 flex flex-col gap-10">
+                      <h1 className="capitalize text-4xl font-semibold sm:text-center lg:text-start text-white">quick link</h1>
+                      <div className="flex flex-col gap-7 text-slate-300 capitalize text-2xl">
+                          <Link to="/">Home </Link>
+                          <Link to="/about">about </Link>
+                          <Link to="/service">service</Link>
+                          <Link to="/blogs">blogs</Link>
+                          <Link to="/contacts">contact</Link>
+                      </div>
+              </div>
       </div>
+      <div className="border-t border-lg border-white capitalize h-[80px] text-center flex items-center justify-center text-white">
+        &copy SomTechDev are reserved
+      </div >
+      <a href="https://wa.me/251902276240"
+       target="_blank"
+        rel="noopener noreferrer"
+       className="fixed bottom-6 right-6 z-50">
+        <img src={whastapp} alt="" className="w-16 h-16 m-2 animate-pulse hover:animate-none"/>
+       
+      </a>
     </div>
   )
 }

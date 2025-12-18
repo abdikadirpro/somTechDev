@@ -18,7 +18,7 @@ const BlogsCreate = () => {
   const reader = new FileReader()
 
   reader.onloadend = () => {
-    dispatch(setImage(reader.result)) // base64 string
+    dispatch(setImage(reader.result))
   }
 
   reader.readAsDataURL(file)
