@@ -5,8 +5,8 @@ import Footers from "../Components/footer/Footers"
 
 const Abouts = () => {
   return (
-    <div className="">
-       <div className='w-[1100px] mx-auto  '>
+    <div>
+       <div>
       <About />
     </div>
     <Footer />

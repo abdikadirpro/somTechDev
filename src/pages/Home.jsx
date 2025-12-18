@@ -11,11 +11,10 @@ import Blogs from "./Blogs"
 
 const Home = () => {
   return (
-    <div className="">
-    <div className="w-[1100px] mx-auto">
+    <div>
+    <div>
       <Hero />
       <Content/>
-      <Blogs />
       <Web/>
       <Software />
       <Maintenance />

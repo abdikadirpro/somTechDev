@@ -1,10 +1,14 @@
 import React from 'react'
 import Post from '../Components/blogs/Post'
+import Footer from '../Components/footer/Footer'
+import Footers from '../Components/footer/Footers'
 
 const Blogs = () => {
   return (
-    <div className='w-[1000px] mx-auto  '>
+    <div>
       <Post/>
+       <Footer/>
+    <Footers/>
     </div>
   )
 }

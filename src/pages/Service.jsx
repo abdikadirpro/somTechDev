@@ -10,7 +10,7 @@ import Footers from '../Components/footer/Footers'
 const Service = () => {
   return (
     <div className="flex flex-col  ">
-    <div className='w-[1000px] mx-auto flex gap-5 flex-col  '>
+    <div className=''>
     <Web/>
     <Application/>
     <Software/>
