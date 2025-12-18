@@ -7,6 +7,7 @@ import Maintenance from "../Components/service/Maintenance"
 import Software from "../Components/service/Software"
 import UiUx from "../Components/service/UIUX"
 import Web from "../Components/service/Web"
+import Blogs from "./Blogs"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <div className="w-[1100px] mx-auto">
       <Hero />
       <Content/>
+      <Blogs />
       <Web/>
       <Software />
       <Maintenance />

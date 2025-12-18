@@ -1,12 +1,16 @@
 import { FaLocationDot, FaPhone, FaSquareYoutube, FaTelegram, FaTiktok } from "react-icons/fa6"
 import { MdOutlineFacebook, MdOutlineMailOutline } from "react-icons/md"
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 
 
 function Footers() {
+    const darkMode = useSelector((state)=>state.posts.darkMode);
+  
+
   return (
-    <div className='flex flex-col bg-slate-500'>
-      <div className="flex flex-row justify-around items-center bg-slate-500 border-lg   ">
+    <div className={darkMode ? 'flex flex-col bg-slate-500':"bg-slate-900 text-slate-50"}>
+      <div className={darkMode ? "flex flex-row justify-around items-center bg-slate-500 border-lg   ":"flex flex-row justify-around  border-lg  items-center bg-slate-900 text-slate-50"}>
         <div className="my-3">
             <p className='text-3xl text-white'>Start learning with 20k students around the world.</p>
         </div>
@@ -29,7 +33,7 @@ function Footers() {
            
         </div>
       </div>
-      <div className=" flex flex-row justify-around bg-slate-500 border-lg border-t w-[1100px] mx-auto  border-white">
+      <div className={darkMode ? " flex flex-row justify-around bg-slate-500 border-lg border-t w-[1100px] mx-auto  border-white":" flex flex-row justify-around bg-slate-900 border-lg border-t w-[1100px] mx-auto  border-white"}>
               <div className="flex flex-col gap-6  lg:w-1/2 my-3">
 
                 <h1 className=' capitalize text-4xl font-semibold sm:text-center lg:text-start text-white'>contact Us</h1>

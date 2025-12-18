@@ -13,33 +13,33 @@ function ContactContent() {
            <h1 className=' capitalize text-4xl font-semibold sm:text-center lg:text-start text-gray-500'>contact Us</h1>
             
           <div className="flex flex-row">
-             <FaPhone className="text-white rounded-xl bg-blue-400 w-[50px] h-[50px] font-semibold text-2xl m-2" />
+             <FaPhone className="text-white rounded-xl bg-slate-500 w-[50px] h-[50px] font-semibold text-2xl m-2" />
             <div className="space-y-3">
-                <span className="ml-5 text-3xl">Phone</span>
-                <p>+251901375553/+25102276248</p>
+                <span className="ml-5 text-3xl text-slate-500">Phone</span>
+                <p className="text-slate-500">+251901375553/+25102276248</p>
             </div>
           </div>
           <div className="flex flex-row">
-             <MdOutlineMailOutline className="text-white rounded-xl bg-blue-400 font-semibold text-5xl " />
+             <MdOutlineMailOutline className="text-white rounded-xl bg-slate-500 font-semibold text-5xl " />
             <div className="space-y-3">
-                <span className="ml-5 text-3xl">Email</span>
-                <p className="text-xl">infoSomTechDev@gmail.com</p>
+                <span className="ml-5 text-3xl  text-slate-500">Email</span>
+                <p className="text-xl text-slate-500">infoSomTechDev@gmail.com</p>
             </div>
           </div>
           <div className="flex flex-row">
-             <FaLocationDot className="text-white rounded-xl bg-blue-400 font-extrabold text-5xl" />
+             <FaLocationDot className="text-white rounded-xl bg-slate-500 font-extrabold text-5xl" />
             <div className="space-y-3">
-                <span className="ml-5 text-3xl">Headquarter Office</span>
-                <p>jigjiga,somali region, ethiopia</p>
+                <span className="ml-5 text-3xl text-slate-500">Headquarter Office</span>
+                <p className="text-slate-500">jigjiga,somali region, ethiopia</p>
             </div>
           </div>
          <div className="flex flex-col gap-3">
-           <h1 className="capitalize text-2xl md:text-3xl">social media</h1>
+           <h1 className="capitalize text-2xl md:text-3xl text-slate-500">social media</h1>
             <div className="flex flex-row justify-start items-center gap-4">
-               <MdOutlineFacebook className="text-4xl bg-blue-400 text-white rounded-xl" />
-               <FaTiktok className="text-4xl bg-blue-400 text-white rounded-xl" />
-               <FaTelegram className="text-4xl bg-blue-400 text-white rounded-xl" />
-               <FaSquareYoutube className="text-4xl bg-red-400 text-white rounded-xl" />
+               <MdOutlineFacebook className="text-4xl bg-slate-500 cursor-pointer text-white rounded-xl" />
+               <FaTiktok className="text-4xl bg-slate-500 text-white cursor-pointer rounded-xl" />
+               <FaTelegram className="text-4xl bg-slate-500 text-white cursor-pointer rounded-xl" />
+               <FaSquareYoutube className="text-4xl bg-slate-500 text-white cursor-pointer rounded-xl" />
             </div>
           </div>
         </div>
