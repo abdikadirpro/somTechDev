@@ -1,34 +1,93 @@
 import { Link } from "react-router-dom"
-import { MdLightMode } from "react-icons/md";
-import { useSelector,useDispatch } from "react-redux";
-import { toggleDarkMode } from "../../PostSlice";
-
+import { MdLightMode, MdMenu, MdClose } from "react-icons/md"
+import { useSelector, useDispatch } from "react-redux"
+import { toggleDarkMode } from "../../PostSlice"
+import { useState } from "react"
 
 const Header = () => {
-   const dispatch = useDispatch();
-       const darkMode = useSelector((state)=>state.posts.darkMode);
+  const dispatch = useDispatch()
+  const darkMode = useSelector((state) => state.posts.darkMode)
+  const [open, setOpen] = useState(false)
 
-  
-  return ( 
-      <div className={darkMode ? " bg-slate-500 text-2xl font-bold font-body  ":" bg-slate-900 text-2xl font-bold font-body  "} >
-        <div className="flex justify-between p-4 text-white">
-            <h3 className="text-3xl font-bold">SomTechDev</h3>
-            <div className="flex justify-center items-center">
-                <ul className="flex gap-5 capitalize font-semibold hover:*:underline decoration-primary">
-                    <Link to="/">Home </Link>
-                    <Link to="/about">about </Link>
-                    <Link to="/service">service</Link>
-                    <Link to="/blogs">blogs</Link>
-                    <Link to="/contacts">contact</Link>
-                    {darkMode ?  <MdLightMode onClick={()=> dispatch(toggleDarkMode())} />: <MdLightMode onClick={()=> dispatch(toggleDarkMode())} />}
-                    <Link to="">getStarted</Link>
+  return (
+    <>
+      {/* HEADER */}
+      <header
+        className={`${
+          darkMode ? "bg-slate-500 text-white" : "bg-slate-900 text-white"
+        } text-2xl font-bold`}
+      >
+        <div className="flex justify-between items-center p-4">
+          <h3 className="text-3xl font-bold">SomTechDev</h3>
 
-                </ul>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex gap-6 capitalize font-semibold items-center">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/service">Service</Link>
+            <Link to="/blogs">Blogs</Link>
+            <Link to="/contacts">Contact</Link>
+             <Link to="/signup">Get Started</Link>
+            <MdLightMode
+              className="cursor-pointer"
+              onClick={() => dispatch(toggleDarkMode())}
+            />
 
-            </div>
+           
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-3xl"
+            onClick={() => setOpen(true)}
+          >
+            <MdMenu />
+          </button>
         </div>
-    </div>
-    
+      </header>
+
+      {/* OVERLAY */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      {/* LEFT SLIDE MENU */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 z-50 transform transition-transform duration-300
+        ${open ? "translate-x-0" : "-translate-x-full"}
+        ${darkMode ? "bg-slate-600 text-white" : "bg-slate-900 text-white"}`}
+      >
+        <div className="flex justify-between items-center p-4">
+          <h3 className="text-2xl font-bold">Menu</h3>
+          <MdClose
+            className="text-3xl cursor-pointer"
+            onClick={() => setOpen(false)}
+          />
+        </div>
+
+        <ul className="flex flex-col gap-6 p-6 capitalize font-semibold">
+          <Link onClick={() => setOpen(false)} to="/">Home</Link>
+          <Link onClick={() => setOpen(false)} to="/about">About</Link>
+          <Link onClick={() => setOpen(false)} to="/service">Service</Link>
+          <Link onClick={() => setOpen(false)} to="/blogs">Blogs</Link>
+          <Link onClick={() => setOpen(false)} to="/contacts">Contact</Link>
+
+          <button
+            className="flex items-center gap-2"
+            onClick={() => dispatch(toggleDarkMode())}
+          >
+            <MdLightMode /> Theme
+          </button>
+
+          <Link onClick={() => setOpen(false)} to="signout">
+            Get Started
+          </Link>
+        </ul>
+      </div>
+    </>
   )
 }
 
