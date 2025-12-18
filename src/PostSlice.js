@@ -4,7 +4,8 @@ const initialState={
     Posts:JSON.parse(window.localStorage.getItem('posts'))||[],
     title:"",
     content:"",
-    image:null
+    image:null,
+    darkMode:false
 }
 const PostSlice =createSlice({
     name:"posts",
@@ -35,8 +36,14 @@ const PostSlice =createSlice({
         const index=action.payload
         state.Posts=state.Posts.filter((_,i) =>i!==index)
         localStorage.setItem("posts",JSON.stringify(state.Posts))
-      }
+      },
+      toggleDarkMode:(state)=>{
+        state.darkMode = !state.darkMode;
+      },
+       setDarkMode: (state, action) => {
+      state.darkMode = action.payload;
+    }
     }
 })
 export default PostSlice.reducer
-export const {setContent,setTitle,setImage,setAdd,deletePost}=PostSlice.actions
+export const {setContent,setTitle,setImage,setAdd,deletePost,toggleDarkMode,setDarkMode} = PostSlice.actions

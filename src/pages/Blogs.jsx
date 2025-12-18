@@ -3,7 +3,7 @@ import Post from '../Components/blogs/Post'
 
 const Blogs = () => {
   return (
-    <div>
+    <div className='w-[1000px] mx-auto  '>
       <Post/>
     </div>
   )

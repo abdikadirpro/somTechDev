@@ -13,23 +13,34 @@ import PostList from "./Components/blogs/PostList"
 
 import SignOut from "./Components/pricipal/SignOut"
 import SignIn from "./Components/pricipal/SignIn"
+import { useSelector,useDispatch } from "react-redux";
+
 
 const App = () => {
+   
+    const darkMode = useSelector((state)=>state.posts.darkMode);
+    console.log(darkMode)
   return (
+
+
+<div className={darkMode ? "bg-white text-slate-700" : "bg-black text-white"}>
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Abouts />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/BlogsCreate" element={<BlogsCreate />} />
-        <Route path="/blogs/PostList" element={<PostList />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/signup" element={<SignOut />} />
-        <Route path="/signin" element={<SignIn />} />
-      </Routes>
-    </BrowserRouter>
+  <Header/>
+  <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/about" element={<Abouts/>}/>
+    <Route path="/service" element={<Service/>}/>
+    <Route path="/blogs" element={<Blogs/>}/>
+    <Route path="/blogs/BlogsCreate" element={<BlogsCreate/>}/>
+    <Route path="/blogs/PostList" element={<PostList/>}/>
+    <Route path="/contacts" element={<Contacts/>}/>
+    <Route path="/signup" element={<SignOut/>}/>
+    <Route path="/signin" element={<SignIn/>}/>
+  </Routes>
+  
+  </BrowserRouter>
+</div>
+
   )
 }
 
