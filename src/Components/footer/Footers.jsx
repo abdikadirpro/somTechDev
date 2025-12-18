@@ -2,7 +2,7 @@ import { FaLocationDot, FaPhone, FaSquareYoutube, FaTelegram, FaTiktok } from "r
 import { MdOutlineFacebook, MdOutlineMailOutline } from "react-icons/md"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom"
-
+import whastapp from "../../assets/image/what.png"
 
 function Footers() {
     const darkMode = useSelector((state)=>state.posts.darkMode);
@@ -89,7 +89,14 @@ function Footers() {
       </div>
       <div className="border-t border-lg border-white capitalize h-[80px] text-center flex items-center justify-center text-white">
         &copy SomTechDev are reserved
-      </div>
+      </div >
+      <a href="https://wa.me/251902276240"
+       target="_blank"
+        rel="noopener noreferrer"
+       className="fixed bottom-6 right-6 z-50">
+        <img src={whastapp} alt="" className="w-16 h-16 m-2 animate-pulse hover:animate-none"/>
+       
+      </a>
     </div>
   )
 }

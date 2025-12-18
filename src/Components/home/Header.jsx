@@ -20,11 +20,7 @@ const Header = () => {
                     <Link to="/service">service</Link>
                     <Link to="/blogs">blogs</Link>
                     <Link to="/contacts">contact</Link>
-                  
-                      <MdNightlightRound onClick={()=>dispatch(toggleDarkMode())}/>
-                   
-                    
-                    <button className="text-slate-200 bg-primary rounded-xl p-1 mb-4 align-middle capitalize ">getstarted</button>
+
                 </ul>
 
             </div>

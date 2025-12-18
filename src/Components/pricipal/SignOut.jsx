@@ -1,5 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { SiApple } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 function SignOut() {
   return (
@@ -30,11 +31,22 @@ function SignOut() {
           <button className="bg-blue-500 p-3 rounded-sm text-white">SignUp</button>
 
         </form>
+        <div>
+         <p className="text-center text-slate-600 mt-4">
+          Already have an account?
+          <Link
+            to="/signin"
+            className="text-blue-500 font-semibold hover:underline"
+          >
+            Sign in
+          </Link>
+        </p>
         <p className="my-5 text-center text-slate-500"> or signup with</p>
         <div className="flex flex-row justify-center items-center my-4 gap-5">
             <FcGoogle className="border border-blue-400 rounded-full w-[50px] cursor-pointer h-[50px]" />
             <SiApple  className="border border-blue-400 rounded-full w-[50px] cursor-pointer h-[50px]"/>
 
+        </div>
         </div>
       </div>
     </div>

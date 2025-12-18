@@ -1,22 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-
-
-import { BrowserRouter,Routes,Route } from "react-router-dom"
 import Home from "./pages/Home"
-import About from "./pages/About"
+import Abouts from "./pages/About"
 import Service from "./pages/Service"
 import Blogs from "./pages/Blogs"
-import Header from "./Components/home/Header"
 import Contacts from "./pages/Contacts"
+
+import Header from "./Components/home/Header"
 
 import BlogsCreate from "./Components/blogs/BlogsCreate"
 import PostList from "./Components/blogs/PostList"
 
-import Abouts from "./pages/About"
 import SignOut from "./Components/pricipal/SignOut"
 import SignIn from "./Components/pricipal/SignIn"
 import { useSelector,useDispatch } from "react-redux";
-
 
 
 const App = () => {
@@ -24,6 +21,7 @@ const App = () => {
     const darkMode = useSelector((state)=>state.posts.darkMode);
     console.log(darkMode)
   return (
+
 
 <div className={darkMode ? "bg-white text-slate-700" : "bg-black text-white"}>
     <BrowserRouter>
@@ -42,6 +40,7 @@ const App = () => {
   
   </BrowserRouter>
 </div>
+
   )
 }
 
