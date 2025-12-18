@@ -1,9 +1,12 @@
 import React from "react";
 import brnad from "../../assets/image/branding2.png";
+import { useSelector } from "react-redux";
 
 const Branding = () => {
+    const darkMode = useSelector((state)=>state.posts.darkMode);
+
   return (
-   <section className="body-Poppins w-full bg-white px-6 md:px-12">
+   <section className={darkMode ? "body-Poppins w-fu bg-white my-5 px-6 md:px-12 mb-6" :"bg-black text-white mb-6"}>
 
 
   <div className="mb-5">
@@ -15,21 +18,19 @@ const Branding = () => {
      Branding and Graphics
     </h1>
 
-    <p className="text-gray-500 text-3xl mt-1 max-w-xl leading-tight font-medium">
+    <p className={darkMode ? "text-gray-500 text-3xl mt-1 max-w-xl font-medium  leading-tight":"text-white"}>
        We help build strong brand identities with logos, visuals,
       and design assets that reflect your style and connect with your audience
     </p>
   </div>
 
 
-  <div className="flex flex-col md:flex-row items-center rounded-xl shadow-lg px-5 
-  hover:scale-105 duration-300 gap-20 mb-5">
+ <div className={darkMode ? "flex flex-col md:flex-row items-center gap-8 rounded-xl shadow-lg px-5  hover:scale-105 duration-300":
+    " flex flex-col md:flex-row items-center gap-8 rounded-xl shadow-lg shadow-stone-500 px-5  hover:scale-105 duration-300"
+  }>
     
-    <p className="
-      text-lg text-gray-600 font-light leading-relaxed
-      md:w-1/2
-      my-5
-    ">
+       <p className={darkMode ? "text-lg text-gray-600 font-light leading-relaxed md:w-1/2 my-5" : "text-white"}>
+
       We help build strong brand identities with logos, visuals,
   and design assets that reflect your style and connect with your audience.
   Our team also crafts cohesive digital experiences, ensuring your brand stands out

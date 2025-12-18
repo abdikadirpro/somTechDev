@@ -15,12 +15,18 @@ import PostList from "./Components/blogs/PostList"
 import Abouts from "./pages/About"
 import SignOut from "./Components/pricipal/SignOut"
 import SignIn from "./Components/pricipal/SignIn"
+import { useSelector,useDispatch } from "react-redux";
+
 
 
 const App = () => {
+   
+    const darkMode = useSelector((state)=>state.posts.darkMode);
+    console.log(darkMode)
   return (
 
-  <BrowserRouter>
+<div className={darkMode ? "bg-white text-slate-700" : "bg-black text-white"}>
+    <BrowserRouter>
   <Header/>
   <Routes>
     <Route path="/" element={<Home/>}/>
@@ -35,6 +41,7 @@ const App = () => {
   </Routes>
   
   </BrowserRouter>
+</div>
   )
 }
 
