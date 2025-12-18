@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { MdNightlightRound } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 import { useSelector,useDispatch } from "react-redux";
 import { toggleDarkMode } from "../../PostSlice";
 
@@ -20,6 +20,8 @@ const Header = () => {
                     <Link to="/service">service</Link>
                     <Link to="/blogs">blogs</Link>
                     <Link to="/contacts">contact</Link>
+                    {darkMode ?  <MdLightMode onClick={()=> dispatch(toggleDarkMode())} />: <MdLightMode onClick={()=> dispatch(toggleDarkMode())} />}
+                    <Link to="">getStarted</Link>
 
                 </ul>
 
