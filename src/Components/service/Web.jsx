@@ -1,8 +1,10 @@
 import React from "react"
 import web1 from "../../assets/image/web2.avif"
 import { useSelector } from "react-redux"
+import { useTranslation } from "react-i18next";
 
 const Web = () => {
+   const { t } = useTranslation();
   const darkMode = useSelector((state) => state.posts.darkMode)
 
   return (
@@ -17,7 +19,7 @@ const Web = () => {
           className={`text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-wide relative
           after:block after:w-14 after:h-1 after:bg-primary after:mt-2`}
         >
-          Web Development
+          {t("web.title")}
         </h1>
 
         <p
@@ -25,7 +27,7 @@ const Web = () => {
             darkMode ? "text-gray-500" : "text-gray-300"
           }`}
         >
-          Modern, scalable, and performance-driven web solutions
+         {t("web.subtitle")}
         </p>
       </div>
 
@@ -40,12 +42,7 @@ const Web = () => {
             darkMode ? "text-gray-600" : "text-gray-300"
           }`}
         >
-          We build fast, responsive, and user-friendly websites that deliver a
-          seamless experience on every device. From personal portfolios to
-          full-scale business platforms, we combine clean design with powerful
-          functionality. Using modern technologies and best practices, we create
-          secure, scalable, and high-performing solutions designed to grow with
-          your business and leave a lasting impression.
+       {t("web.paragraph")}
         </p>
 
       

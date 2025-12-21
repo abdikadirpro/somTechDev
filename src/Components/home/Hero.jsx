@@ -1,21 +1,24 @@
+import { useTranslation } from "react-i18next";
+
 const Hero = () => {
+   const { t } = useTranslation();
   return (
     <section className="min-h-screen flex items-center">
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 max-w-[1100px] mx-auto px-4">
 
        
         <div className="flex flex-col items-start text-left max-w-xl">
-          <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight capitalize">
-            Transform ideas into powerful digital products.
+          <h1 
+            className="font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight capitalize">
+            {t("hero.title")}
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl mt-4 text-gray-600">
-            We create modern websites, mobile apps, and management systems for
-            businesses, schools, hospitals, HR systems, and startups.
+             {t("hero.description")}
           </p>
 
           <button className="mt-6 bg-gray-800 hover:bg-gray-700 transition text-white px-6 py-3 rounded-lg">
-            Hire Us Now!
+            {t("hero.button")}
           </button>
         </div>
 

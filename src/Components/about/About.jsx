@@ -1,61 +1,59 @@
-import React from 'react'
+
+import { useTranslation } from 'react-i18next';
 
 function About() {
+  const { t } = useTranslation();
+  
+
   return (
     <div className="flex flex-col gap-12 justify-center items-center py-10 px-4 sm:px-6 md:px-12">
 
-    
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold  text-slate-400 text-center">
-        About Us
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-400 text-center">
+        {t('about.title')}
       </h1>
 
-    
       <div className="w-full max-w-2xl text-center">
         <p className="text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed">
-          We are a dedicated software solutions company committed to delivering innovative, reliable, and user-friendly digital products. Our goal is to help businesses, institutions, and individuals improve efficiency, productivity, and growth through modern technology.
+          {t('about.description')}
         </p>
       </div>
 
-    
       <div className="w-full max-w-2xl text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-4">
-          What We Do
+          {t('about.whatWeDoTitle')}
         </h2>
         <ul className="list-disc list-inside text-base sm:text-lg md:text-xl text-slate-500 space-y-2 text-left sm:text-left mx-auto max-w-md">
-          <li>Web application development</li>
-          <li>Mobile application development</li>
-          <li>System design and integration</li>
-          <li>Maintenance and technical support</li>
+          <li>{t('about.list.webApp')}</li>
+          <li>{t('about.list.mobileApp')}</li>
+          <li>{t('about.list.systemDesign')}</li>
+          <li>{t('about.list.maintenance')}</li>
         </ul>
       </div>
 
-     
       <div className="w-full max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-       
+
         <div className="text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-2">
-            Our Mission
+            {t('about.missionTitle')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed">
-            To deliver high-quality software solutions that solve real problems, add value to our clients, and support digital transformation.
+            {t('about.missionText')}
           </p>
         </div>
 
-        
         <div className="text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-2">
-            Our Vision
+            {t('about.visionTitle')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed">
-            To become a trusted technology partner by consistently providing innovative, efficient, and sustainable software solutions.
+            {t('about.visionText')}
           </p>
         </div>
 
       </div>
 
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

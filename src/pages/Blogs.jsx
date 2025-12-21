@@ -6,9 +6,11 @@ import Footers from '../Components/footer/Footers'
 const Blogs = () => {
   return (
     <div>
-      <Post/>
-       <Footer/>
-    <Footers/>
+    <div className="w-full md:max-w-[1100px] md:mx-auto px-4">
+        <Post/>
+     </div>
+        <Footer/>
+        <Footers/>
     </div>
   )
 }
