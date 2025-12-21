@@ -13,11 +13,13 @@ import PostList from "./Components/blogs/PostList"
 
 import SignOut from "./Components/pricipal/SignOut"
 import SignIn from "./Components/pricipal/SignIn"
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./Components/translate/LanguageSwitcher";
 
 
 const App = () => {
-   
+    const { t } = useTranslation();
     const darkMode = useSelector((state)=>state.posts.darkMode);
     console.log(darkMode)
   return (
@@ -36,9 +38,15 @@ const App = () => {
     <Route path="/contacts" element={<Contacts/>}/>
     <Route path="/signup" element={<SignOut/>}/>
     <Route path="/signin" element={<SignIn/>}/>
+    <Route path="/translate" element={<LanguageSwitcher/>}/>
+   
   </Routes>
   
   </BrowserRouter>
+    <div>
+      <LanguageSwitcher />
+      <h1>{t("welcome")}</h1>
+    </div>
 </div>
 
   )

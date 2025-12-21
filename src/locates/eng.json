@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "title": "Transform ideas into powerful digital products.",
+    "description": "We create modern websites, mobile apps, and management systems for businesses, schools, hospitals, HR systems, and startups.",
+    "button": "Hire Us Now!"
+  },
+
+  "application": {
+    "title": "Mobile App Development",
+    "subtitle": "High-performance mobile applications built with modern technologies",
+    "paragraph1": "We develop high-quality mobile applications for Android and iOS that deliver smooth, reliable, and engaging user experiences.",
+    "paragraph2": "Our apps are built with intuitive interfaces, strong performance, and features tailored to your exact goals — whether it’s a startup idea, business solution, or enterprise system.",
+    "paragraph3": "From concept and design to development and deployment, we focus on scalability, security, and long-term usability to ensure your app grows with your business.",
+    "imageAlt": "Mobile App Development"
+  },
+    "web": {
+    "title": "Web Development",
+    "subtitle": "Modern, scalable, and performance-driven web solutions",
+    "paragraph": "We build fast, responsive, and user-friendly websites that deliver a seamless experience on every device. From personal portfolios to full-scale business platforms, we combine clean design with powerful functionality. Using modern technologies and best practices, we create secure, scalable, and high-performing solutions designed to grow with your business and leave a lasting impression.",
+    "imageAlt": "Web Development"
+  },
+  "software": {
+    "title": "Software Solutions",
+    "subtitle": "Innovative, reliable, and performance-focused solutions designed to grow your business and enhance user experience.",
+    "paragraph": "We provide custom software that simplifies your business operations. From automation tools to full systems, our solutions are built to match your workflow and support your growth. We focus on intuitive interfaces, seamless integrations, and scalable architecture to help your team work smarter and achieve more.",
+    "imageAlt": "Software Solutions"
+  },
+   "maintenance": {
+    "title": "Maintenance and Support",
+    "subtitle": "Reliable, scalable, and performance-driven solutions to keep your digital products running flawlessly.",
+    "paragraph": "We offer ongoing updates, fixes, and improvements to keep your website, system, or mobile app running smoothly. Our support ensures your digital products stay secure and up-to-date. Additionally, we provide performance monitoring, optimization, and timely guidance to prevent issues before they arise, giving you peace of mind and allowing your business to operate without interruptions.",
+    "imageAlt": "Maintenance and Support"
+  },
+    "branding": {
+    "title": "Branding and Graphics",
+    "subtitle": "We help build strong brand identities with logos, visuals, and design assets that reflect your style and connect with your audience.",
+    "paragraph": "We help build strong brand identities with logos, visuals, and design assets that reflect your style and connect with your audience. Our team also crafts cohesive digital experiences, ensuring your brand stands out across web and social platforms while maintaining consistency and impact.",
+    "imageAlt": "Branding and Graphics"
+  },
+   "uiux": {
+    "title": "UI/UX Design",
+    "subtitle": "Innovative, user-focused, and visually striking designs that enhance engagement and deliver seamless experiences.",
+    "paragraph": "We create clean, modern, and user-centered designs that make your product intuitive and visually appealing. Every design is crafted to optimize user flow, improve engagement, and deliver an exceptional digital experience. Additionally, we focus on responsive layouts and accessibility, ensuring your product looks and works flawlessly across all devices.",
+    "imageAlt": "UI/UX Design"
+  },
+   "contact": {
+    "ctaText": "Let's Create Something Amazing",
+    "title": "Get in Touch",
+    "description": "Have questions about our services? Want to collaborate? Or just want to say hello?",
+    "highlight": "We're here to help you succeed!"
+  },
+   "about": {
+    "title": "About Us",
+    "description": "We are a dedicated software solutions company committed to delivering innovative, reliable, and user-friendly digital products. Our goal is to help businesses, institutions, and individuals improve efficiency, productivity, and growth through modern technology.",
+    "whatWeDoTitle": "What We Do",
+    "list": {
+      "webApp": "Web application development",
+      "mobileApp": "Mobile application development",
+      "systemDesign": "System design and integration",
+      "maintenance": "Maintenance and technical support"
+    },
+    "missionTitle": "Our Mission",
+    "missionText": "To deliver high-quality software solutions that solve real problems, add value to our clients, and support digital transformation.",
+    "visionTitle": "Our Vision",
+    "visionText": "To become a trusted technology partner by consistently providing innovative, efficient, and sustainable software solutions."
+  },
+    "signUp": {
+    "title": "Create a New Account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "button": "Sign Up",
+    "already": "Already have an account?",
+    "signIn": "Sign In",
+    "orSignUpWith": "Or sign up with"
+  },
+   "content": {
+    "title": "Why Choose SomaliTech Devs?",
+    "description": "We deliver innovative, reliable, and scalable digital solutions that help businesses, schools, hospitals, and startups grow efficiently. Our team focuses on high-quality design, modern technology, and excellent support to ensure your digital presence stands out."
+  }
+}
+
+

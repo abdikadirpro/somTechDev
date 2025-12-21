@@ -1,8 +1,10 @@
 import React from "react"
 import app from "../../assets/image/app1.png"
 import { useSelector } from "react-redux"
+import { useTranslation } from "react-i18next";
 
 const Application = () => {
+   const { t } = useTranslation();
   const darkMode = useSelector((state) => state.posts.darkMode)
 
   return (
@@ -17,7 +19,7 @@ const Application = () => {
           className={`text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-wide relative
           after:block after:w-14 after:h-1 after:bg-primary after:mt-2`}
         >
-          Mobile App Development
+            {t("application.title")}
         </h1>
 
         <p
@@ -25,7 +27,7 @@ const Application = () => {
             darkMode ? "text-gray-500" : "text-gray-300"
           }`}
         >
-          High-performance mobile applications built with modern technologies
+           {t("application.subtitle")}
         </p>
       </div>
 
@@ -40,18 +42,13 @@ const Application = () => {
             darkMode ? "text-gray-600" : "text-gray-300"
           }`}
         >
-          We develop high-quality mobile applications for Android and iOS that
-          deliver smooth, reliable, and engaging user experiences.
+            {t("application.paragraph1")}
           <br />
           <br />
-          Our apps are built with intuitive interfaces, strong performance, and
-          features tailored to your exact goals — whether it’s a startup idea,
-          business solution, or enterprise system.
+            {t("application.paragraph2")}
           <br />
           <br />
-          From concept and design to development and deployment, we focus on
-          scalability, security, and long-term usability to ensure your app
-          grows with your business.
+         {t("application.paragraph3")}
         </p>
 
        

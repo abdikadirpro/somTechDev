@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Web from '../Components/service/Web'
 import Application from '../Components/service/Application'
 import Software from '../Components/service/Software'
@@ -10,7 +10,7 @@ import Footers from '../Components/footer/Footers'
 const Service = () => {
   return (
     <div className="flex flex-col  ">
-    <div className=''>
+     <div className="w-full md:max-w-[1100px] md:mx-auto px-4">
     <Web/>
     <Application/>
     <Software/>

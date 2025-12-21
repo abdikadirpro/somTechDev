@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "U beddel fikradaha badeecooyin dijitaal ah oo awood leh.",
+    "description": "Waxaan sameynaa bogag casri ah, app-yo mobil, iyo nidaamyo maamul oo loogu talagalay ganacsiyada, dugsiyada, isbitaallada, nidaamyada shaqaalaha, iyo shirkadaha bilowga ah.",
+    "button": "Nala Shaqee Hadda!"
+  },
+
+    "application": {
+    "title": "Horumarinta Barnaamijyada Mobilka",
+    "subtitle": "Barnaamijyo mobil oo tayo sare leh kuna dhisan tiknoolajiyada casriga ah",
+    "paragraph1": "Waxaan horumarinaa barnaamijyo mobil oo tayo sare leh oo u shaqeeya Android iyo iOS, kuna siiya isticmaalayaal khibrad degdeg ah, la isku halleyn karo, oo soo jiidasho leh.",
+    "paragraph2": "Barnaamijyadeennu waxay leeyihiin naqshad fudud, waxqabad sare, iyo astaamo si gaar ah ugu habboon hadafyadaada — ha noqoto fikrad ganacsi bilow ah ama nidaam shirkadeed.",
+    "paragraph3": "Laga bilaabo fikradda iyo naqshadda ilaa horumarinta iyo daahfurka, waxaan diiradda saarnaa ballaarin, amni, iyo isticmaal waqti dheer ah si app-kaagu ula koro ganacsigaaga.",
+    "imageAlt": "Horumarinta Barnaamijyada Mobilka"
+  },
+    "web": {
+    "title": "Horumarinta Bogagga Internetka",
+    "subtitle": "Xalal web oo casri ah, ballaarin kara, kuna dhisan waxqabad sare",
+    "paragraph": "Waxaan dhisnaa bogag internet oo degdeg ah, la jaanqaada dhammaan qalabka, isla markaana sahlan in la isticmaalo. Laga bilaabo bogag shaqsiyeed ilaa nidaamyo ganacsi oo ballaaran, waxaan isku darnaa naqshad nadiif ah iyo shaqeyn awood leh. Anagoo adeegsanayna tiknoolajiyada casriga ah iyo hab-raacyada ugu wanaagsan, waxaan abuurnaa xalal ammaan ah, ballaarin kara, oo waxqabad sare leh si ay ula koraan ganacsigaaga una reebaan saameyn waarta.",
+    "imageAlt": "Horumarinta Bogagga Internetka"
+  },
+    "software": {
+    "title": "Xalalka Software-ka",
+    "subtitle": "Xalal hal-abuur leh, lagu kalsoonaan karo, kuna saleysan waxqabad sare oo loogu talagalay kobcinta ganacsigaaga iyo hagaajinta khibradda isticmaalaha.",
+    "paragraph": "Waxaan bixinaa software gaar ah oo fududeeya hawlaha ganacsigaaga. Laga bilaabo qalabka otomaatiga ilaa nidaamyo buuxa, xalalkayagu waxay ku dhisan yihiin hab-raaca shaqadaada isla markaana taageeraya kobacaaga. Waxaan diiradda saarnaa naqshado sahlan, isku xidhnaan hufan, iyo qaab-dhismeed ballaarin kara si kooxdaadu u shaqeyso si caqli badan una gaarto wax ka badan.",
+    "imageAlt": "Xalalka Software-ka"
+  },
+  "maintenance": {
+    "title": "Dayactir iyo Taageero",
+    "subtitle": "Xalal lagu kalsoonaan karo, ballaarin kara, kuna saleysan waxqabad sare si alaabtaada dijitaalka ah u shaqeyso si habsami leh.",
+    "paragraph": "Waxaan bixinaa cusbooneysiin joogto ah, hagaajin, iyo horumarinta si website-kaaga, nidaamkaaga, ama app-kaaga mobil uu u shaqeeyo si habsami leh. Taageeradayadu waxay hubisaa in alaabtaada dijitaalka ah ay ammaan yihiin oo casri ah. Intaas waxaa dheer, waxaan bixinaa kormeer waxqabad, hagaajin, iyo talo waqtigeeda ku habboon si looga hortago dhibaatooyinka ka hor inta aysan dhicin, taasoo ku siinaysa xasillooni maskaxeed oo ganacsigaaga u oggolaanaysa inuu si joogto ah u shaqeeyo.",
+    "imageAlt": "Dayactir iyo Taageero"
+  },
+    "branding": {
+    "title": "Summadeyn iyo Sawir-gacmeed",
+    "subtitle": "Waxaan ka caawinaa dhisidda aqoonsiyo sumadeed oo xooggan oo leh astaamo, muuqaal, iyo naqshado ka tarjumaya qaabkaaga isla markaana la xiriira dhagaystayaashaada.",
+    "paragraph": "Waxaan ka caawinaa dhisidda aqoonsiyo sumadeed oo xooggan oo leh astaamo, muuqaal, iyo naqshado ka tarjumaya qaabkaaga isla markaana la xiriira dhagaystayaashaada. Kooxdayadu sidoo kale waxay abuuraan khibrado dhijitaal isku dhafan, iyagoo hubinaya in sumaddaadu ka dhex muuqato webka iyo baraha bulshada isla markaana la ilaalinayo isku-dheellitirnaan iyo saameyn.",
+    "imageAlt": "Summadeyn iyo Sawir-gacmeed"
+  },
+   "uiux": {
+    "title": "Naqshadeynta UI/UX",
+    "subtitle": "Naqshado hal-abuur leh, diiradda saaraya isticmaaleha, oo muuqaal ahaan soo jiidasho leh si loo kordhiyo ka-qaybgalka loona bixiyo khibrad isku-dhafan.",
+    "paragraph": "Waxaan abuurnaa naqshado nadiif ah, casri ah, oo isticmaale-ku-wareegsan kuwaas oo ka dhigaya badeecadaada mid fudud oo muuqaal ahaan soo jiidasho leh. Naqshad kasta waxaa loo sameeyaa si loo hagaajiyo qulqulka isticmaalaha, loo kordhiyo ka-qaybgalka, loona bixiyo khibrad dijitaal oo heer sare ah. Intaas waxaa dheer, waxaan diiradda saarnaa habeynta jawaab celinta iyo helitaanka, si badeecadaadu u muuqato uguna shaqeyso si habsami leh dhammaan aaladaha.",
+    "imageAlt": "Naqshadeynta UI/UX"
+  },
+   "contact": {
+    "ctaText": "Aan abuurno wax cajiib ah",
+    "title": "Nala soo xiriir",
+    "description": "Ma qabtaa su’aalo ku saabsan adeegyada? Ma rabtaa inaad nala shaqeyso? Ama kaliya ma rabtaa inaad salaanto?",
+    "highlight": "Waxaan halkaan u joognaa inaan kaa caawino guushaada!"
+  },
+   "about": {
+    "title": "Nagu saabsan",
+    "description": "Waxaan nahay shirkad bixisa xalalka software-ka oo u heellan bixinta badeecooyin dijitaal oo hal-abuur leh, la isku halleyn karo, isla markaana u fudud isticmaalaha. Ujeedadeennu waa inaan ka caawino ganacsiyada, hay’adaha, iyo shaqsiyaadka hagaajinta hufnaanta, wax-soo-saarka, iyo koritaanka iyada oo loo marayo tiknoolajiyada casriga ah.",
+    "whatWeDoTitle": "Waxaan sameyno",
+    "list": {
+      "webApp": "Horumarinta web applications",
+      "mobileApp": "Horumarinta mobile applications",
+      "systemDesign": "Naqshadeynta iyo isku xirka nidaamyada",
+      "maintenance": "Dayactirka iyo taageerada farsamada"
+    },
+    "missionTitle": "Hadafkayaga",
+    "missionText": "Si aan u bixino xalal software oo tayo sare leh kuwaas oo xalliya dhibaatooyinka dhabta ah, qiimo u kordhiya macaamiisheena, isla markaana taageera isbeddelka dijitaalka.",
+    "visionTitle": "Himilkayaga",
+    "visionText": "Si aan u noqono lammaane tiknoolajiyadeed oo lagu kalsoonaan karo annagoo si joogto ah u bixina xalal software hal-abuur leh, hufan, oo waara."
+  },
+    "signUp": {
+    "title": "Samee Akoon Cusub",
+    "firstName": "Magaca Hore",
+    "lastName": "Magaca Dambe",
+    "email": "Email",
+    "password": "Furaha Sirta ah",
+    "button": "Saxiix",
+    "already": "Horey akoon baad u leedahay?",
+    "signIn": "Saxiix Gal",
+    "orSignUpWith": "Ama iska diiwaangeli adigoo isticmaalaya"
+  },
+   "content": {
+    "title": "Maxaa Loo Doortaa SomaliTech Devs?",
+    "description": "Waxaan bixinaa xalal dijitaal oo casri ah, la isku halleyn karo, oo kor u qaada ganacsiyada, dugsiyada, isbitaallada, iyo shirkadaha bilowga ah. Kooxdayadu waxay diiradda saartaa naqshad tayo sare leh, tiknoolajiyada casriga ah, iyo taageero heer sare ah si loo hubiyo in joogitaankaaga dijitaalka ah uu soo baxo."
+  }
+}

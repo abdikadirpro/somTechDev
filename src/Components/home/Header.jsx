@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom"
 import { MdLightMode, MdMenu, MdClose } from "react-icons/md"
 import { useSelector, useDispatch } from "react-redux"
-import { toggleDarkMode } from "../../PostSlice"
+import { toggleDarkMode,transEnToSo } from "../../PostSlice"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
+
 
 const Header = () => {
   const dispatch = useDispatch()
   const darkMode = useSelector((state) => state.posts.darkMode)
+  const trans = useSelector((state) => state.posts.translateEnToSo)
   const [open, setOpen] = useState(false)
+    const { i18n } = useTranslation();
+    console.log(trans)
 
   return (
+    
     <>
       {/* HEADER */}
       <header
@@ -32,7 +38,8 @@ const Header = () => {
               className="cursor-pointer"
               onClick={() => dispatch(toggleDarkMode())}
             />
-
+           {trans ?  <button onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}>Eng</button>:
+                <button onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}>So</button>}
            
           </ul>
 
@@ -85,6 +92,11 @@ const Header = () => {
           <Link onClick={() => setOpen(false)} to="signout">
             Get Started
           </Link>
+           {trans ?  <button className="flex items-center gap-2"
+            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}>Eng</button>:
+           <button className="flex items-center gap-2"
+           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}>So</button>}
+           
         </ul>
       </div>
     </>

@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { Store } from './Store.js'
 import { Provider } from 'react-redux'
+import "./i18n"; // MUST be here
 
 
 createRoot(document.getElementById('root')).render(

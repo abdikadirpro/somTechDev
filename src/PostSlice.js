@@ -5,7 +5,8 @@ const initialState={
     title:"",
     content:"",
     image:null,
-    darkMode:false
+    darkMode:false,
+    translateEnToSo:false
 }
 const PostSlice =createSlice({
     name:"posts",
@@ -42,8 +43,15 @@ const PostSlice =createSlice({
       },
        setDarkMode: (state, action) => {
       state.darkMode = action.payload;
+    },
+    transEnToSo:(state)=>{
+       state.translateEnToSo = !state.translateEnToSo
+    },
+    setTransEnToSo:(state,action)=>{
+        state.translateEnToSo = action.payload
     }
+    
     }
 })
 export default PostSlice.reducer
-export const {setContent,setTitle,setImage,setAdd,deletePost,toggleDarkMode,setDarkMode} = PostSlice.actions
+export const {setContent,setTitle,setImage,setAdd,deletePost,toggleDarkMode,setDarkMode,transEnToSo} = PostSlice.actions

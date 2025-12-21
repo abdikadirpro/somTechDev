@@ -7,12 +7,15 @@ import Maintenance from "../Components/service/Maintenance"
 import Software from "../Components/service/Software"
 import UiUx from "../Components/service/UIUX"
 import Web from "../Components/service/Web"
-import Blogs from "./Blogs"
+import LanguageSwitcher from "../Components/translate/LanguageSwitcher"
+
 
 const Home = () => {
   return (
     <div>
-    <div>
+   <div className="w-full md:max-w-[1100px] md:mx-auto px-4">
+
+      <LanguageSwitcher />
       <Hero />
       <Content/>
       <Web/>
