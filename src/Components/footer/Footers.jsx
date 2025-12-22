@@ -1,44 +1,104 @@
-import React from "react"
-import { FaLocationDot, FaPhone, FaSquareYoutube, FaTelegram, FaTiktok } from "react-icons/fa6"
-import { MdOutlineFacebook, MdOutlineMailOutline } from "react-icons/md"
-import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
-import whatsapp from "../../assets/image/what.png"
+import React, { useEffect, useRef, useState } from "react";
+import { FaLocationDot, FaPhone,FaSquareYoutube, FaTelegram, FaTiktok} from "react-icons/fa6";
+import { MdOutlineFacebook, MdOutlineMailOutline } from "react-icons/md";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import whatsapp from "../../assets/image/what.png";
 
 function Footers() {
-  const darkMode = useSelector((state) => state.posts.darkMode)
+  const darkMode = useSelector((state) => state.posts.darkMode);
 
+
+  // --- Stats section logic ---
+  const stats = [
+    { label: "Projects Delivered", value: 120 },
+    { label: "Happy Clients", value: 75 },
+    { label: "Solutions Built", value: 30 },
+  ];
+  const [counts, setCounts] = useState(stats.map(() => 0));
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    let intervals = [];
+
+    const startCounting = () => {
+      stats.forEach((item, index) => {
+        let current = 0;
+        const step = Math.ceil(item.value / 60);
+
+        const interval = setInterval(() => {
+          current += step;
+          if (current > item.value) current = item.value;
+
+          setCounts((prev) => {
+            const updated = [...prev];
+            updated[index] = current;
+            return updated;
+          });
+
+          if (current >= item.value) clearInterval(interval);
+        }, 20);
+
+        intervals.push(interval);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startCounting();
+        } else {
+          intervals.forEach(clearInterval);
+          intervals = [];
+          setCounts(stats.map(() => 0));
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => {
+      intervals.forEach(clearInterval);
+      observer.disconnect();
+    };
+  }, []);
   return (
-    <footer className={`${darkMode ? "bg-slate-500 text-gray-100" : "bg-slate-900 text-white"}`}>
+    <footer
+      className={`${
+        darkMode ? "bg-slate-500 text-gray-100" : "bg-slate-900 text-white"
+      }`}
+    >
       
-     
-      <div className="max-w-[1100px] mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-xl md:text-2xl font-semibold text-center md:text-left">
-          Start learning with 20k students around the world.
-        </p>
-
-        <div className="flex gap-6 text-center">
-          {["40+", "50+", "30+"].map((val, i) => (
-            <div key={i}>
-              <h2 className="text-3xl font-bold">{val}</h2>
-              <p className="text-sm text-gray-300">Start</p>
-            </div>
-          ))}
+   <div className="max-w-[1100px] mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+  <p className="text-xl md:text-2xl font-semibold text-center md:text-left">
+    Delivering reliable software solutions to businesses worldwide.
+  </p>
+ <div
+      ref={sectionRef}
+      className="flex gap-6 text-center justify-center mt-10"
+    >
+      {stats.map((item, i) => (
+        <div key={i}>
+          <h2 className="text-3xl font-bold">{counts[i]}+</h2>
+          <p className="text-sm text-gray-300">{item.label}</p>
         </div>
-      </div>
+      ))}
+    </div>
+</div>
 
-     
+
+      
       <div className="max-w-[1100px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-400">
-
-       
+        {/* Contact */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">Contact Us</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold">Contact Us</h2>
 
           <div className="flex items-start gap-4">
-            <FaPhone className="text-2xl sm:text-3xl mt-1" />
+            <FaPhone className="text-2xl mt-1" />
             <div>
               <p className="font-semibold">Phone</p>
-              <p>+251901375553 / +25102276248</p>
+              <p>+251901375553 / +25902276248</p>
             </div>
           </div>
 
@@ -58,16 +118,15 @@ function Footers() {
             </div>
           </div>
 
-         
           <div className="flex gap-4 mt-4 text-xl">
-            <MdOutlineFacebook className="hover:text-blue-500 transition" />
-            <FaTiktok className="hover:text-pink-500 transition" />
-            <FaTelegram className="hover:text-blue-400 transition" />
-            <FaSquareYoutube className="hover:text-red-600 transition" />
+            <MdOutlineFacebook className="hover:text-blue-500" />
+            <FaTiktok className="hover:text-pink-500" />
+            <FaTelegram className="hover:text-blue-400" />
+            <FaSquareYoutube className="hover:text-red-600" />
           </div>
         </div>
 
-        
+       
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Categories</h2>
           <div className="flex flex-col gap-3 text-gray-300 capitalize text-lg">
@@ -79,25 +138,24 @@ function Footers() {
           </div>
         </div>
 
+       
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Quick Links</h2>
           <div className="flex flex-col gap-3 text-gray-300 text-lg">
-            <Link to="/" className="hover:text-white transition">Home</Link>
-            <Link to="/about" className="hover:text-white transition">About</Link>
-            <Link to="/service" className="hover:text-white transition">Service</Link>
-            <Link to="/blogs" className="hover:text-white transition">Blogs</Link>
-            <Link to="/contacts" className="hover:text-white transition">Contact</Link>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/service">Service</Link>
+            <Link to="/blogs">Blogs</Link>
+            <Link to="/contacts">Contact</Link>
           </div>
         </div>
-
       </div>
 
-      {/* Copyright */}
       <div className="border-t border-gray-400 text-center py-4 text-sm">
-        &copy; {new Date().getFullYear()} SomTechDev. All rights reserved.
+        © {new Date().getFullYear()} SomTechDev. All rights reserved.
       </div>
 
-      {/* WhatsApp Floating */}
+     
       <a
         href="https://wa.me/251902276240"
         target="_blank"
@@ -111,7 +169,7 @@ function Footers() {
         />
       </a>
     </footer>
-  )
+  );
 }
 
-export default Footers
+export default Footers;

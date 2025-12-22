@@ -3,7 +3,10 @@ import { MdLightMode, MdMenu, MdClose } from "react-icons/md"
 import { useSelector, useDispatch } from "react-redux"
 import { toggleDarkMode,transEnToSo } from "../../PostSlice"
 import { useState } from "react"
+import { MdCompareArrows } from "react-icons/md";
 import { useTranslation } from "react-i18next"
+import som from "../../assets/image/somalia.png"
+import eng from "../../assets/image/united-states.png"
 
 
 const Header = () => {
@@ -21,26 +24,46 @@ const Header = () => {
       <header
         className={`${
           darkMode ? "bg-slate-500 text-white" : "bg-slate-900 text-white"
-        } text-2xl font-bold`}
+        } text-xl font-light font-body`}
       >
         <div className="flex justify-between items-center p-4">
-          <h3 className="text-3xl font-bold">SomTechDev</h3>
+<h3 className="
+  dots-after
+  text-3xl md:text-4xl font-extrabold
+  bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-400
+  bg-clip-text text-transparent
+  tracking-wide
+  drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]
+  hover:drop-shadow-[0_0_20px_rgba(52,211,153,0.6)]
+  transition-all duration-500
+">
+  SomTechDev
+</h3>
+
+
+
+
+
+
+
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-6 capitalize font-semibold items-center">
+          <ul className="hidden md:flex gap-6 capitalize  items-center font-light ">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/service">Service</Link>
             <Link to="/blogs">Blogs</Link>
             <Link to="/contacts">Contact</Link>
-             <Link to="/signup">Get Started</Link>
+             <Link to="/signup" className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">Join Now</Link>
             <MdLightMode
               className="cursor-pointer"
               onClick={() => dispatch(toggleDarkMode())}
             />
-           {trans ?  <button onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}>Eng</button>:
-                <button onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}>So</button>}
-           
+            
+           {trans ?  <button className="flex justify-center text-center items-center" onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}> <img src={som} alt="" className="w-7 h-7" /></button>:
+               
+                <button className="flex justify-center text-center items-center" onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}> <img src={eng} alt="" className="w-7 h-7" /></button>}
+          
           </ul>
 
           {/* Mobile Menu Button */}
@@ -89,13 +112,14 @@ const Header = () => {
             <MdLightMode /> Theme
           </button>
 
-          <Link onClick={() => setOpen(false)} to="signout">
-            Get Started
+          <Link onClick={() => setOpen(false)} to="signout" 
+          className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">
+            Join Now
           </Link>
            {trans ?  <button className="flex items-center gap-2"
-            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}>Eng</button>:
+            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}><img src={som} alt="" className="w-7 h-7" /></button>:
            <button className="flex items-center gap-2"
-           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}>So</button>}
+           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}><img src={eng} alt="" className="w-7 h-7" /></button>}
            
         </ul>
       </div>
