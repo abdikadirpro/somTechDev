@@ -41,11 +41,11 @@ const handelAdd=(e)=>{
             <input
             value={title}
             onChange={(e) => dispatch(setTitle(e.target.value))}
-               type="text"  placeholder='Title...' className='py-3 px-3 my-5 outline-none border-2  border-gray-400 rounded-lg' />
+               type="text"  placeholder='Title...' className='py-3 px-3 my-5 outline-none border-2 text-black border-gray-400 rounded-lg' />
             <textarea
             value={content}
             onChange={(e)=>dispatch(setContent(e.target.value))} 
-             id="" rows={5} placeholder='Content......' className=' px-3 my-5 outline-none border-2  border-gray-400 rounded-lg'></textarea>
+             id="" rows={5} placeholder='Content......' className=' px-3 my-5 text-black outline-none border-2  border-gray-400 rounded-lg'></textarea>
             <input 
               accept="image/*"
               onChange={handleImage}
