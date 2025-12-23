@@ -7,9 +7,7 @@ const BlogsCreate = () => {
     const content=useSelector((state)=>state.posts.content)
     const image=useSelector((state)=>state.posts.image)
    
-    // console.log(content)
-    // console.log(title)
-    // console.log(image)
+    
    
  const handleImage = (e) => {
   const file = e.target.files[0]

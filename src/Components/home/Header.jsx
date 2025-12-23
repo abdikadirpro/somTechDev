@@ -67,12 +67,29 @@ const Header = () => {
           </ul>
 
           {/* Mobile Menu Button */}
+
+         <button
+            className="flex items-center gap-2"
+            onClick={() => dispatch(toggleDarkMode())}
+          >
+            <MdLightMode /> 
+          </button>
+
+
+           {trans ?  <button className="flex items-center gap-2"
+            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}><img src={som} alt="" className="w-7 h-7" /></button>:
+           <button className="flex items-center gap-2"
+           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}><img src={eng} alt="" className="w-7 h-7" /></button>}
+           
           <button
             className="md:hidden text-3xl"
             onClick={() => setOpen(true)}
           >
+            
             <MdMenu />
+            
           </button>
+          
         </div>
       </header>
 
@@ -95,7 +112,9 @@ const Header = () => {
           <MdClose
             className="text-3xl cursor-pointer"
             onClick={() => setOpen(false)}
+            
           />
+          
         </div>
 
         <ul className="flex flex-col gap-6 p-6 capitalize font-semibold">
@@ -105,22 +124,13 @@ const Header = () => {
           <Link onClick={() => setOpen(false)} to="/blogs">Blogs</Link>
           <Link onClick={() => setOpen(false)} to="/contacts">Contact</Link>
 
-          <button
-            className="flex items-center gap-2"
-            onClick={() => dispatch(toggleDarkMode())}
-          >
-            <MdLightMode /> Theme
-          </button>
+        
 
           <Link onClick={() => setOpen(false)} to="signout" 
           className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">
             Join Now
           </Link>
-           {trans ?  <button className="flex items-center gap-2"
-            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}><img src={som} alt="" className="w-7 h-7" /></button>:
-           <button className="flex items-center gap-2"
-           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}><img src={eng} alt="" className="w-7 h-7" /></button>}
-           
+          
         </ul>
       </div>
     </>
