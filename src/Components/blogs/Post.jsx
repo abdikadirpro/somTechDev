@@ -6,12 +6,12 @@ const Post = () => {
   const posts = useSelector((state) => state.posts.Posts);
 
   return (
-    <section className="w-full font-body font-medium my-10 px-4 sm:px-6 md:px-12 flex flex-wrap gap-6">
+    <section className="w-full h-full font-body font-medium my-10 px-4 sm:px-6 md:px-12 flex flex-wrap gap-6 py-20">
       {posts.map((post, index) => (
         <div
           key={index}
           className="rounded-lg shadow-lg overflow-hidden flex flex-col bg-white dark:bg-gray-800 transition hover:shadow-xl
-                     w-full sm:w-[80%] md:w-[45%] lg:w-[30%]  lg:h-[50%]"
+                     w-full h-full sm:w-[80%] md:w-[45%] lg:w-[35%]  lg:h-[70%]"
         >
          
           <img
