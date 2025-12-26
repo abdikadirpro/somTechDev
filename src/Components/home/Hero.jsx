@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
+    const darkMode = useSelector((state) => state.posts.darkMode)
    const { t } = useTranslation();
   return (
     <section className="min-h-screen flex items-center">
@@ -13,11 +15,11 @@ const Hero = () => {
             {t("hero.title")}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl mt-4 text-gray-600">
+          <p className={`"text-base sm:text-lg md:text-xl mt-4 ${darkMode ? "text-gray-800":"text-gray-300"} "`}>
              {t("hero.description")}
           </p>
 
-          <button className="mt-6 bg-gray-800 hover:bg-gray-700 transition text-white px-6 py-3 rounded-lg">
+          <button className="mt-6 bg-blue-500 hover:bg-blue-600 transition font-semibold text-white px-6 py-3 rounded-lg">
             {t("hero.button")}
           </button>
         </div>

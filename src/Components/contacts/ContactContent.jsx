@@ -1,14 +1,17 @@
 import { FaPhone, FaLocationDot, FaTiktok, FaTelegram, FaSquareYoutube } from "react-icons/fa6";
 import { MdOutlineMailOutline, MdOutlineFacebook } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 function ContactContent() {
+      const darkMode = useSelector((state) => state.posts.darkMode)
+
   return (
-    <div className="py-10 px-4 sm:px-6 md:px-12 bg-gray-50">
+    <div className={`"py-10 px-4 sm:px-6 md:px-12 ${darkMode ? "bg-gray-400":"bg-gray-900"}"`}>
       <div className="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
 
         {/* Contact Info */}
         <div className="flex-1 flex flex-col gap-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-700 text-center md:text-left">
+          <h1 className={`"text-3xl sm:text-4xl md:text-5xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"}  text-center md:text-left"`}>
             Contact Us
           </h1>
 
@@ -16,8 +19,8 @@ function ContactContent() {
           <div className="flex items-start gap-4">
             <FaPhone className="text-white bg-blue-500 w-12 h-12 p-2 rounded-lg flex-shrink-0" />
             <div>
-              <span className="text-xl sm:text-2xl font-semibold text-gray-700">Phone</span>
-              <p className="text-gray-600">+251901375553 / +25102276248</p>
+              <span className={`"text-xl sm:text-2xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"}"`}>Phone</span>
+              <p className={`"${darkMode ? "text-gray-800":"text-gray-100"}"`}>+251901375553 / +25102276248</p>
             </div>
           </div>
 
@@ -25,8 +28,8 @@ function ContactContent() {
           <div className="flex items-start gap-4">
             <MdOutlineMailOutline className="text-white bg-blue-500 w-12 h-12 p-2 rounded-lg flex-shrink-0" />
             <div>
-              <span className="text-xl sm:text-2xl font-semibold text-gray-700">Email</span>
-              <p className="text-gray-600">infoSomTechDev@gmail.com</p>
+              <span className={`"text-xl sm:text-2xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"}"`}>Email</span>
+              <p className={`"${darkMode ? "text-gray-800":"text-gray-100"}"`}>infoSomTechDev@gmail.com</p>
             </div>
           </div>
 
@@ -34,19 +37,19 @@ function ContactContent() {
           <div className="flex items-start gap-4">
             <FaLocationDot className="text-white bg-blue-500 w-12 h-12 p-2 rounded-lg flex-shrink-0" />
             <div>
-              <span className="text-xl sm:text-2xl font-semibold text-gray-700">Headquarter Office</span>
-              <p className="text-gray-600">Jigjiga, Somali Region, Ethiopia</p>
+              <span className={`"text-xl sm:text-2xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"}"`}>Headquarter Office</span>
+              <p className={`"${darkMode ? "text-gray-800":"text-gray-100"}"`}>Jigjiga, Somali Region, Ethiopia</p>
             </div>
           </div>
 
           {/* Social Media */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-700 mb-2">Social Media</h2>
+            <h2 className={`"text-2xl sm:text-3xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"} mb-2"`}>Social Media</h2>
             <div className="flex gap-4">
-              <MdOutlineFacebook className="text-white bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
-              <FaTiktok className="text-white bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
-              <FaTelegram className="text-white bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
-              <FaSquareYoutube className="text-white bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
+              <MdOutlineFacebook className="text-white hover:scale-125 duration-300 bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
+              <FaTiktok className="text-white hover:scale-125 duration-300 bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
+              <FaTelegram className="text-white hover:scale-125 duration-300 bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
+              <FaSquareYoutube className="text-white hover:scale-125 duration-300 bg-blue-500 w-10 h-10 p-2 rounded-lg cursor-pointer hover:bg-blue-600" />
             </div>
           </div>
         </div>

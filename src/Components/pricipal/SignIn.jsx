@@ -7,7 +7,7 @@ function SignIn() {
  const darkMode = useSelector((state) => state.posts.darkMode)
 
   return (
-    <div className={darkMode ?"flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 px-4":"flex justify-center items-center min-h-screen  dark:bg-gray-900 px-4"}>
+    <div className={darkMode ?"flex justify-center items-center min-h-screen bg-gray-100 py-12 dark:bg-gray-900 px-4":"py-12 flex justify-center items-center min-h-screen  dark:bg-gray-900 px-4"}>
       <div className={darkMode ? "bg-white dark:bg-gray-800 shadow-lg rounded-xl w-full max-w-md p-8 flex flex-col gap-6":" dark:bg-gray-700 shadow-lg shadow-slate-400 rounded-xl w-full max-w-md p-8 flex flex-col gap-6"}>
         <h1 className={darkMode ? "text-3xl sm:text-4xl font-bold text-center text-gray-700 dark:text-gray-200":"text-3xl sm:text-4xl font-bold text-center text-gray-300 dark:text-gray-200"}>
           Welcome Back!

@@ -89,7 +89,7 @@ function Footers() {
 
 
       
-      <div className="max-w-[1100px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-400">
+      <div className="max-w-[1100px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-blue-500">
         {/* Contact */}
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Contact Us</h2>
@@ -119,10 +119,10 @@ function Footers() {
           </div>
 
           <div className="flex gap-4 mt-4 text-xl">
-            <MdOutlineFacebook className="hover:text-blue-500" />
-            <FaTiktok className="hover:text-pink-500" />
-            <FaTelegram className="hover:text-blue-400" />
-            <FaSquareYoutube className="hover:text-red-600" />
+            <MdOutlineFacebook className="hover:scale-125 duration-500 size-10" />
+            <FaTiktok className="hover:scale-125 duration-500 size-10" />
+            <FaTelegram className="hover:scale-125 duration-500 size-10" />
+            <FaSquareYoutube className="hover:scale-125 duration-500 size-10" />
           </div>
         </div>
 
@@ -151,7 +151,7 @@ function Footers() {
         </div>
       </div>
 
-      <div className="border-t border-gray-400 text-center py-4 text-sm">
+      <div className="border-t border-blue-500 text-center py-4 text-sm">
         © {new Date().getFullYear()} SomTechDev. All rights reserved.
       </div>
 

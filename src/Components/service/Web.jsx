@@ -9,7 +9,7 @@ const Web = () => {
 
   return (
     <section
-      className={`font-poppins my-10 px-4 sm:px-6 md:px-12 ${
+      className={`font-poppins my-10 px-4 sm:px-6 md:px-12 py-20 ${
         darkMode ? "bg-white text-gray-800" : "bg-black text-white"
       }`}
     >
@@ -17,7 +17,7 @@ const Web = () => {
       <div className="mb-8">
         <h1
           className={`text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-wide relative
-          after:block after:w-14 after:h-1 after:bg-primary after:mt-2`}
+          after:block after:w-14 after:h-1 after:bg-blue-500 after:mt-2`}
         >
           {t("web.title")}
         </h1>
@@ -34,7 +34,7 @@ const Web = () => {
     
       <div
         className={`flex flex-col md:flex-row items-center gap-8 rounded-xl p-6 transition-transform md:hover:scale-105
-        ${darkMode ? "shadow-lg" : "shadow-lg shadow-stone-600"}`}
+        ${darkMode ? "shadow-lg" : "shadow-lg shadow-blue-500"}`}
       >
        
         <p
