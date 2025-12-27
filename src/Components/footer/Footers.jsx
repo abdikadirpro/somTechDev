@@ -106,7 +106,7 @@ function Footers() {
             <MdOutlineMailOutline className="text-3xl mt-1" />
             <div>
               <p className="font-semibold">Email</p>
-              <p>infoSomTechDev@gmail.com</p>
+              <p>infoHornTechDev@gmail.com</p>
             </div>
           </div>
 
