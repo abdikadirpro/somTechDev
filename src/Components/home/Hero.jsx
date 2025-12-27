@@ -5,7 +5,7 @@ const Hero = () => {
     const darkMode = useSelector((state) => state.posts.darkMode)
    const { t } = useTranslation();
   return (
-    <section className="min-h-screen flex items-center">
+    <section className="min-h-screen flex items-center" >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 max-w-[1100px] mx-auto px-4">
 
        

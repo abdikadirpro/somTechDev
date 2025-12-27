@@ -6,6 +6,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import som from "../../assets/image/somalia.png"
 import eng from "../../assets/image/united-states.png"
+import logo from "../../assets/image/logo.png"
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -25,13 +26,15 @@ const Header = () => {
         <div className="flex justify-between items-center p-4">
           
           {/* LOGO */}
-          <h3 className="
-            dots-after text-3xl md:text-4xl font-extrabold
-            bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-400
-            bg-clip-text text-transparent tracking-wide
-          ">
-            SomTechDev
-          </h3>
+         <div className="flex items-center">
+  <img
+    src={logo}
+    alt="HornTechDev"
+    className="w-14 h-14 md:w-18 md:h-18 object-contain"  // standard size
+  />
+</div>
+
+
 
           {/* DESKTOP MENU */}
           <ul className="hidden md:flex gap-6 capitalize items-center">
