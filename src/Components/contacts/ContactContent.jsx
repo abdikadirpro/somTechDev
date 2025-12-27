@@ -29,7 +29,7 @@ function ContactContent() {
             <MdOutlineMailOutline className="text-white bg-blue-500 w-12 h-12 p-2 rounded-lg flex-shrink-0" />
             <div>
               <span className={`"text-xl sm:text-2xl font-semibold ${darkMode ? "text-gray-800":"text-gray-100"}"`}>Email</span>
-              <p className={`"${darkMode ? "text-gray-800":"text-gray-100"}"`}>infoSomTechDev@gmail.com</p>
+              <p className={`"${darkMode ? "text-gray-800":"text-gray-100"}"`}>infoHornTechDev@gmail.com</p>
             </div>
           </div>
 
