@@ -7,6 +7,10 @@ import { MdCompareArrows } from "react-icons/md";
 import { useTranslation } from "react-i18next"
 import som from "../../assets/image/somalia.png"
 import eng from "../../assets/image/united-states.png"
+import { logoutUser } from "../../userSlice";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 const Header = () => {
@@ -15,7 +19,15 @@ const Header = () => {
   const trans = useSelector((state) => state.posts.translateEnToSo)
   const [open, setOpen] = useState(false)
     const { i18n } = useTranslation();
-    console.log(trans)
+      const user = useSelector((state) => state.userModel.user);
+    console.log("userRole ", user)
+
+    const handleLogout = () => {
+  localStorage.removeItem("token");   // ✅ remove token
+  dispatch(logoutUser());             // ✅ clear redux
+  navigate("/signin");                // ✅ redirect
+};
+
 
   return (
     
@@ -54,7 +66,56 @@ const Header = () => {
             <Link to="/service">Service</Link>
             <Link to="/blogs">Blogs</Link>
             <Link to="/contacts">Contact</Link>
-             <Link to="/signup" className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">Join Now</Link>
+             <>
+                    {user?.role === "admin" && (
+                    <>
+                      <Link to="/blogs/BlogsCreate">create</Link>
+                      <Link to="/blogs/postList">manage</Link>
+                    </>
+                  )}
+
+               </>
+
+
+            {user ? (
+            <div className="relative group">
+              {/* Avatar */}
+              <div
+                className="w-10 h-10 rounded-full bg-blue-500 text-white
+                            flex items-center justify-center font-bold cursor-pointer"
+              >
+                {user.firstName?.charAt(0).toUpperCase()}
+              </div>
+
+              {/* Dropdown */}
+              <div
+                className="absolute right-0 mt-2 w-40 bg-white text-black
+                            rounded-lg shadow-lg hidden group-hover:block z-50"
+              >
+                <div className="px-4 py-2 border-b text-sm font-semibold">
+                  {user.firstName} {user.lastName}
+                </div>
+
+                <button
+                  onClick={handleLogout}
+                  className="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+            ) : (
+            <Link
+              to="/signin"
+              className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg
+                          shadow-md hover:bg-blue-600 transition"
+            >
+              Join Now
+            </Link>
+            )}
+
+            
+
             <MdLightMode
               className="cursor-pointer"
               onClick={() => dispatch(toggleDarkMode())}
@@ -68,18 +129,8 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
 
-         <button
-            className="flex items-center gap-2"
-            onClick={() => dispatch(toggleDarkMode())}
-          >
-            <MdLightMode /> 
-          </button>
+        
 
-
-           {trans ?  <button className="flex items-center gap-2"
-            onClick={() => dispatch(transEnToSo(i18n.changeLanguage("en")))}><img src={som} alt="" className="w-7 h-7" /></button>:
-           <button className="flex items-center gap-2"
-           onClick={() => dispatch(transEnToSo(i18n.changeLanguage("so")))}><img src={eng} alt="" className="w-7 h-7" /></button>}
            
           <button
             className="md:hidden text-3xl"
@@ -126,10 +177,26 @@ const Header = () => {
 
         
 
-          <Link onClick={() => setOpen(false)} to="signout" 
-          className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">
-            Join Now
-          </Link>
+          {user ? (
+             
+              <div
+                className="w-10 h-10 rounded-full bg-blue-500 text-white
+                            flex items-center justify-center font-bold cursor-pointer"
+                title={`${user.firstName} ${user.lastName}`}
+              >
+                {user.firstName?.charAt(0).toUpperCase()}
+              </div>
+              ) : (
+              
+              <Link
+                to="/signin"
+                className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg
+                            shadow-md hover:bg-blue-600 transition-colors duration-300"
+              >
+                Join Now
+              </Link>
+              )}
+
           
         </ul>
       </div>

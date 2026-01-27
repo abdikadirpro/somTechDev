@@ -19,7 +19,7 @@ function About() {
       </div>
 
       <div className="w-full max-w-2xl text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-4 ">
           {t('about.whatWeDoTitle')}
         </h2>
         <ul className="list-disc list-inside text-base sm:text-lg md:text-xl text-slate-500 space-y-2 text-left sm:text-left mx-auto max-w-md">
