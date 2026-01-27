@@ -20,7 +20,7 @@ function About() {
       </div>
 
       <div className="w-full max-w-2xl text-center">
-        <h2 className={`"text-2xl sm:text-3xl md:text-4xl font-semibold ${darkMode ? "text-gray-800":"text-gray-200"} text-gray-100 mb-4"`}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400 mb-4 ">
           {t('about.whatWeDoTitle')}
         </h2>
         <ul className={`"list-disc list-inside text-base sm:text-lg md:text-xl ${darkMode ? "text-gray-800 text-center":"text-gray-400 text-center"}  space-y-2 text-center sm:text-center mx-auto max-w-md"`}>
