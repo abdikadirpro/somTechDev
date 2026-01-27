@@ -65,7 +65,7 @@
     "visionText": "To become a trusted technology partner by consistently providing innovative, efficient, and sustainable software solutions."
   },
     "signUp": {
-    "title": "Create a New Account",
+    "title": "Create Account",
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
@@ -76,7 +76,7 @@
     "orSignUpWith": "Or sign up with"
   },
    "content": {
-    "title": "Why Choose SomaliTech Devs?",
+    "title": "Why Choose HornTech Devs?",
     "description": "We deliver innovative, reliable, and scalable digital solutions that help businesses, schools, hospitals, and startups grow efficiently. Our team focuses on high-quality design, modern technology, and excellent support to ensure your digital presence stands out."
   }
 }

@@ -102,7 +102,7 @@ function Footers() {
             <MdOutlineMailOutline className="text-3xl mt-1" />
             <div>
               <p className="font-semibold">Email</p>
-              <p>infoSomTechDev@gmail.com</p>
+              <p>infoHornTechDev@gmail.com</p>
             </div>
           </div>
 
@@ -115,10 +115,10 @@ function Footers() {
           </div>
 
           <div className="flex gap-4 mt-4 text-xl">
-            <MdOutlineFacebook className="hover:text-blue-500" />
-            <FaTiktok className="hover:text-pink-500" />
-            <FaTelegram className="hover:text-blue-400" />
-            <FaSquareYoutube className="hover:text-red-600" />
+            <MdOutlineFacebook className="hover:scale-125 duration-500 size-10" />
+            <FaTiktok className="hover:scale-125 duration-500 size-10" />
+            <FaTelegram className="hover:scale-125 duration-500 size-10" />
+            <FaSquareYoutube className="hover:scale-125 duration-500 size-10" />
           </div>
         </div>
 
@@ -147,7 +147,7 @@ function Footers() {
         </div>
       </div>
 
-      <div className="border-t border-gray-400 text-center py-4 text-sm">
+      <div className="border-t border-blue-500 text-center py-4 text-sm">
         © {new Date().getFullYear()} SomTechDev. All rights reserved.
       </div>
 
