@@ -20,33 +20,51 @@ const Header = () => {
       {/* HEADER */}
       <header
         className={` fixed top-0 left-0 w-full z-50   ${
-          darkMode ? "bg-slate-500" : "bg-slate-900"
-        } text-white text-xl font-light font-body h-16`}
+          darkMode ? "bg-blue-950" : "bg-[#1e1e1e]"
+        } text-white text-xl font-light font-body h-20`}
       >
-        <div className="flex justify-between items-center p-4">
+        {/* <style>
+          color: #1e1e1e
+        </style> */}
+        <div className="flex justify-between items-center p-5">
           
           {/* LOGO */}
          <div className="flex items-center">
-  <img
-    src={logo}
-    alt="HornTechDev"
-    className="w-14 h-14 md:w-18 md:h-18 object-contain"  // standard size
-  />
-</div>
+        <img
+          src={logo}
+          alt="HornTechDev"
+          className="w-14 h-14 md:w-18 md:h-18 object-contain"  // standard size
+        />
+      </div>
 
 
 
           {/* DESKTOP MENU */}
-          <ul className="hidden md:flex gap-6 capitalize items-center">
-            <Link to="/" className="hover:underline decoration-blue-500">Home</Link>
-            <Link to="/about" className="hover:underline decoration-blue-500">About</Link>
-            <Link to="/service" className="hover:underline decoration-blue-500">Service</Link>
-            <Link to="/blogs" className="hover:underline decoration-blue-500">Blogs</Link>
-            <Link to="/contacts" className="hover:underline decoration-blue-500">Contact</Link>
+          <ul className="hidden md:flex gap-5 capitalize items-center transition-all duration-300 ease-in-out">
+            <div className="relative group">
+              <Link className="text-lg" to="/">Home</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opacftiy-0 invisdible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className="text-lg " to="/about">About</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className="text-lg " to="/service">Service</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className="text-lg " to="/blogs">Blogs</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className="text-lg " to="/contacts">Contact</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
 
             <Link
               to="/signup"
-              className="bg-blue-500 px-6 py-2 rounded-lg font-semibold hover:bg-blue-600"
+              className="bg-blue-700 px-5 py-1 rounded-lg font-semibold text-lg hover:bg-blue-700/80"
             >
               Join Now
             </Link>
@@ -108,27 +126,27 @@ const Header = () => {
       <div
         className={`fixed top-0 left-0 h-full w-64 z-50 transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"}
-        ${darkMode ? "bg-slate-600" : "bg-slate-900"} text-white`}
+        ${darkMode ? "bg-blue-950" : "bg-slate-900"} text-white`}
       >
-        <div className="flex justify-between items-center p-4">
+        <div className="flex justify-between items-center p-5">
           <h3 className="text-2xl font-bold">Menu</h3>
           <MdClose
-            className="text-3xl cursor-pointer"
+            className="text-3xl cursor-pointer text-red-600"
             onClick={() => setOpen(false)}
           />
         </div>
 
-        <ul className="flex flex-col gap-6 p-6 font-semibold">
-          <Link onClick={() => setOpen(false)} to="/">Home</Link>
-          <Link onClick={() => setOpen(false)} to="/about">About</Link>
-          <Link onClick={() => setOpen(false)} to="/service">Service</Link>
-          <Link onClick={() => setOpen(false)} to="/blogs">Blogs</Link>
-          <Link onClick={() => setOpen(false)} to="/contacts">Contact</Link>
+        <ul className="flex flex-col font-semibold">
+          <Link onClick={() => setOpen(false)} className="transition-all duration-300 hover:bg-blue-900/50 px-5 py-3" to="/">Home</Link>
+          <Link onClick={() => setOpen(false)} className="transition-all duration-300 hover:bg-blue-900/50 px-5 py-3" to="/about">About</Link>
+          <Link onClick={() => setOpen(false)} className="transition-all duration-300 hover:bg-blue-900/50 px-5 py-3" to="/service">Service</Link>
+          <Link onClick={() => setOpen(false)} className="transition-all duration-300 hover:bg-blue-900/50 px-5 py-3" to="/blogs">Blogs</Link>
+          <Link onClick={() => setOpen(false)} className="transition-all duration-300 hover:bg-blue-900/50 px-5 py-3" to="/contacts">Contact</Link>
 
           <Link
             onClick={() => setOpen(false)}
             to="/signup"
-            className="bg-blue-500 px-6 py-2 rounded-lg text-center"
+            className="bg-blue-700 hover:bg-blue-700/80 px-5 py-1 rounded-lg text-center m-5"
           >
             Join Now
           </Link>

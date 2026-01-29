@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="bg-blue-600 text-white py-10 w-full">
+    <footer className="bg-blue-950 text-white py-10 w-full">
       <div className="max-w-[1100px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
         
         
@@ -21,14 +21,18 @@ function Footer() {
             <input
               type="text"
               placeholder="Your Name"
+              name="YourName"
+              id="YourName"
               className="bg-transparent border border-white rounded-md px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white/70 w-full sm:w-auto"
             />
             <input
               type="email"
+              id="emails"
+              name="emails"
               placeholder="Your Email"
               className="bg-transparent border border-white rounded-md px-3 py-2 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white/70 w-full sm:w-auto"
             />
-            <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-blue-500 hover:text-white transition">
+            <button className="bg-blue-50 text-blue-900 font-semibold px-6 py-2 rounded-md hover:bg-blue-700/90 hover:text-white transition">
               Subscribe
             </button>
           </form>

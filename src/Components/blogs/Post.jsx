@@ -10,8 +10,7 @@ const Post = () => {
       {posts.map((post, index) => (
         <div
           key={index}
-          className="rounded-lg shadow-lg overflow-hidden flex flex-col bg-white dark:bg-gray-800 transition hover:shadow-xl
-                     w-full h-full sm:w-[80%] md:w-[45%] lg:w-[35%]  lg:h-[70%]"
+          className="rounded-lg shadow-lg overflow-hidden flex flex-col bg-white dark:bg-slate/950/90 transition hover:shadow-xl w-full h-full sm:w-[80%] md:w-[45%] lg:w-[35%]  lg:h-[70%]"
         >
          
           <img

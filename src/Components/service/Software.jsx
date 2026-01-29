@@ -10,34 +10,30 @@ const Software = () => {
   return (
     <section
       className={`font-poppins my-10 px-4 sm:px-6 md:px-12 ${
-        darkMode ? "bg-white text-gray-800" : "bg-black text-white"
+        darkMode ? "bg-[#0000ff02] text-gray-800" : "bg-[#282828] text-white"
       }`}
     >
       <div className="mb-8">
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-wide relative
-          after:block after:w-14 after:h-1 after:bg-blue-500 after:mt-2"
+          className={`text-3xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide relative
+          after:block after:w-20 after:h-0.5 after:bg-blue-600 after:mt-2 ${darkMode ? "text-blue-950" : "text-white"}`}
         >
           {t("software.title")}
         </h1>
 
         <p
-          className={`mt-3 max-w-xl text-base sm:text-lg md:text-xl font-medium ${
-            darkMode ? "text-gray-500" : "text-gray-300"
-          }`}
+          className={`mt-3 max-w-xl text-sm sm:text-md md:text-lg font-medium ${darkMode ? "text-gray-800/80":"text-white/85"}`}
         >
           {t("software.subtitle")}
         </p>
       </div>
 
       <div
-        className={`flex flex-col md:flex-row items-center gap-8 rounded-xl p-6 transition-transform md:hover:scale-105
-        ${darkMode ? "shadow-lg" : "shadow-lg shadow-blue-500"}`}
+        className={`flex flex-col md:flex-row items-center gap-8 rounded-xl p-6 transition-transform md:hover:scsale-105
+        ${darkMode ? "text-gray-800/80":"text-white/85"}`}
       >
         <p
-          className={`text-sm sm:text-base md:text-lg leading-relaxed md:w-1/2 ${
-            darkMode ? "text-gray-600" : "text-gray-300"
-          }`}
+          className={`text-md sm:text-lg md:text-xl leading-relaxed md:w-1/1 ${darkMode ? "text-gray-800/80":"text-white/85"}`}
         >
           {t("software.paragraph")}
         </p>
@@ -45,7 +41,7 @@ const Software = () => {
         <img
           src={soft}
           alt={t("software.imageAlt")}
-          className="w-full sm:w-3/4 md:w-80 max-w-md rounded-lg object-contain transition-transform md:hover:scale-105"
+          className="w-full sm:w-3/4 md:w-96 max-w-md rounded-lg object-contain transition-transform md:hover:scale-105"
         />
       </div>
     </section>

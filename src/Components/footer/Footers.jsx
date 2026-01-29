@@ -64,14 +64,11 @@ function Footers() {
     };
   }, []);
   return (
-    <footer
-      className={`${
-        darkMode ? "bg-slate-500 text-gray-100" : "bg-slate-900 text-white"
-      }`}
-    >
+    <footer className={`${darkMode ? 'bg-[#0000ff02] text-blue-950' : 'bg-[#282828] text-white'}`}>
+
       
    <div className="max-w-[1100px] mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-  <p className="text-xl md:text-2xl font-semibold text-center md:text-left">
+  <p className={`"text-xl md:text-2xl font-semibold md:text-left" ${darkMode ? "text-blue-950" : "text-white"}`}>
     Delivering reliable software solutions to businesses worldwide.
   </p>
  <div
@@ -81,7 +78,7 @@ function Footers() {
       {stats.map((item, i) => (
         <div key={i}>
           <h2 className="text-3xl font-bold">{counts[i]}+</h2>
-          <p className="text-sm text-gray-300">{item.label}</p>
+          <p className={`text-sm ${darkMode ? "text-black/60":"text-white/85"}`}>{item.label}</p>
         </div>
       ))}
     </div>
@@ -89,7 +86,7 @@ function Footers() {
 
 
       
-      <div className="max-w-[1100px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-blue-500">
+      <div className="max-w-[1100px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-blue-900">
         {/* Contact */}
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Contact Us</h2>
@@ -129,29 +126,45 @@ function Footers() {
        
         <div className="flex flex-col gap-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Categories</h2>
-          <div className="flex flex-col gap-3 text-gray-300 capitalize text-lg">
-            <span>Web App</span>
-            <span>Maintenance</span>
-            <span>Mobile App</span>
-            <span>UI/UX</span>
-            <span>Branding</span>
+          <div className={`flex flex-col gap-3 capitalize text-sm cursor-default ${darkMode ? "text-gray-800/80":"text-white/85"}`}>
+            <span className="hover:underline w-fit transition-all duration-200">Web App</span>
+            <span className="hover:underline w-fit transition-all duration-200">Maintenance</span>
+            <span className="hover:underline w-fit transition-all duration-200">Mobile App</span>
+            <span className="hover:underline w-fit transition-all duration-200">UI/UX</span>
+            <span className="hover:underline w-fit transition-all duration-200">Branding</span>
           </div>
         </div>
 
        
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           <h2 className="text-2xl sm:text-3xl font-bold">Quick Links</h2>
-          <div className="flex flex-col gap-3 text-gray-300 text-lg">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/service">Service</Link>
-            <Link to="/blogs">Blogs</Link>
-            <Link to="/contacts">Contact</Link>
-          </div>
+          <ul className="flex flex-col md:flex gap-5 capitalize">
+            <div className="relative group">
+              <Link className={`${darkMode ? "text-gray-800/80":"text-white/85"}`} to="/">Home</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opacftiy-0 invisdible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className={`${darkMode ? "text-gray-800/80":"text-white/85"}`} to="/about">About</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className={`${darkMode ? "text-gray-800/80":"text-white/85"}`} to="/service">Service</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className={`${darkMode ? "text-gray-800/80":"text-white/85"}`} to="/blogs">Blogs</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+            <div className="relative group">
+              <Link className={`${darkMode ? "text-gray-800/80":"text-white/85"}`} to="/contacts">Contact</Link>
+              <span className="absolute w-10 h-0.5 top-7 left-0 bg-blue-600 opactiy-0 invisible gruop:hover:visible group:hover:opacity-100"></span>
+            </div>
+
+          </ul>
         </div>
       </div>
 
-      <div className="border-t border-blue-500 text-center py-4 text-sm">
+      <div className="border-t border-blue-900 text-center py-4 text-sm">
         © {new Date().getFullYear()} SomTechDev. All rights reserved.
       </div>
 
